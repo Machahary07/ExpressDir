@@ -10,5 +10,6 @@ app.listen(port, () => {
 });
 
 app.use((req, res) => {
-    res.send('Hello World!')
+    let code = "<h1>Header Tag</h1> <ul> <li>Item 1</li> <li>Item 2</li> <li>Item 3</li> </ul>";
+    res.send(code)
 });
