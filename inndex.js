@@ -11,6 +11,12 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
+app.get("/", (req, res) => {
+    // Generate a random dice value between 1 and 6
+    const diceVal = Math.floor(Math.random() * 6) + 1;
+    res.render("home", { diceVal });
+});
+
 app.get("/ig/:username", (req, res) => {
     let {username} = req.params;
     res.render("instagram",{username});
