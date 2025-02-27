@@ -11,10 +11,9 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-app.get("/", (req, res) => {
-    // Generate a random dice value between 1 and 6
+app.get("/rolldice", (req, res) => {
     const diceVal = Math.floor(Math.random() * 6) + 1;
-    res.render("home", { diceVal });
+    res.render("dice", { diceVal });
 });
 
 app.get("/ig/:username", (req, res) => {
